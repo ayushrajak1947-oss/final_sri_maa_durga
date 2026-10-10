@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sri Sri Maa Durga Puja Committee</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #650000;
+    --dark-red: #240000;
+    --gold: #ffd56a;
+    --light-gold: #fff0b3;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: white;
+    background:
+        radial-gradient(ellipse at top, #9e1010 0%, #4d0000 45%, #190000 100%);
+    overflow-x: hidden;
+}
+
+/* Golden decorative background */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 10% 20%, #ffcf5930 0 2px, transparent 3px),
+        radial-gradient(circle at 80% 30%, #ffcf5925 0 2px, transparent 3px),
+        radial-gradient(circle at 30% 80%, #ffcf5920 0 2px, transparent 3px);
+    background-size: 90px 90px, 130px 130px, 110px 110px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 7%;
+    background: #250000eF;
+    border-bottom: 1px solid #d8a943;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 19px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/* Hero section */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 55px 20px;
+    position: relative;
+    border-bottom: 2px solid #c99a36;
+}
+
+.hero::before {
+    content: "✦";
+    position: absolute;
+    top: 30px;
+    left: 8%;
+    font-size: 55px;
+    color: #ffd56a55;
+}
+
+.hero::after {
+    content: "✦";
+    position: absolute;
+    bottom: 30px;
+    right: 8%;
+    font-size: 55px;
+    color: #ffd56a55;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    border-radius: 30px;
+    padding: 10px 22px;
+    color: var(--light-gold);
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 7vw, 75px);
+    line-height: 1.2;
+    color: var(--gold);
+    text-shadow: 0 0 25px #ffb70055;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: clamp(19px, 4vw, 30px);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #ffe9b0;
+    max-width: 600px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    margin: 7px;
+    background: linear-gradient(135deg, #fff0ad, #dca52e, #fff0ad);
+    color: #480000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 5px 20px #0005;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px #ffd56a55;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+/* Sections */
+section {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.section-title {
+    color: var(--gold);
+    font-size: clamp(27px, 5vw, 42px);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: #ffe8ba;
+    margin-bottom: 35px;
+    line-height: 1.7;
+}
+
+/* Golden cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    padding: 28px 22px;
+    border: 1px solid #d4a94c;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #780b0b, #350000);
+    box-shadow: 0 8px 25px #0004;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #fff0ad;
+}
+
+.card .icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: var(--gold);
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #ffe9cf;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+/* Image gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #d8aa46;
+    transition: 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px #ffd56a55;
+}
+
+/* QR section */
+.qr-box {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    background: #fff9e8;
+    color: #4d0000;
+    border: 3px solid var(--gold);
+    border-radius: 20px;
+}
+
+.qr-box img {
+    width: 100%;
+    max-width: 230px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.qr-box p {
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    padding: 35px 20px;
+    text-align: center;
+    background: #180000;
+    border-top: 2px solid #c99a36;
+    color: #ffe4a1;
+    line-height: 2;
+}
+
+footer strong {
+    color: var(--gold);
+}
+
+/* Mobile menu */
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 78vh;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">🙏 Maa Durga Puja</div>
+
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#donation">Donation</a>
+    </div>
+</nav>
+
+<header class="hero" id="home">
+
+    <div class="badge">॥ जय माता दी ॥</div>
+
+    <h1>🌺 श्री श्री माँ दुर्गा पूजा 🌺</h1>
+
+    <h2>Sri Sri Maa Durga Puja Committee</h2>
+
+    <p>
+        Jugsalai Fatak, Jamshedpur, Jharkhand<br>
+        Maa Durga's blessings, devotion, unity and celebration.
+    </p>
+
+    <div>
+        <a href="#about" class="btn">Explore Our Puja</a>
+        <a href="#donation" class="btn btn-outline">🙏 Donate Now</a>
+    </div>
+
+</header>
+
+<section id="about">
+
+    <h2 class="section-title">✨ About Our Committee ✨</h2>
+
+    <p class="section-subtitle">
+        A celebration of devotion, tradition and togetherness.
+        Join us in seeking Maa Durga's divine blessings.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🙏</div>
+            <h3>Our Tradition</h3>
+            <p>
+                Celebrating the divine presence of Maa Durga
+                with devotion and cultural traditions.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🪔</div>
+            <h3>Puja Schedule</h3>
+            <p>
+                Puja dates and timings will be announced here.
+                Please check the official committee schedule.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📍</div>
+            <h3>Our Location</h3>
+            <p>
+                Sri Sri Maa Durga Puja Committee,<br>
+                Jugsalai Fatak, Jamshedpur.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="gallery">
+
+    <h2 class="section-title">🌺 Puja Gallery 🌺</h2>
+
+    <p class="section-subtitle">
+        Glimpses of devotion, decoration and celebration.
+    </p>
+
+    <div class="gallery">
+
+        <!-- Replace these paths with your own GitHub photo paths -->
+
+        <img src="images/durga1.jpg"
+             alt="Maa Durga Puja">
+
+        <img src="images/durga2.jpg"
+             alt="Durga Puja Decoration">
+
+        <img src="images/durga3.jpg"
+             alt="Puja Celebration">
+
+    </div>
+
+</section>
+
+<section id="donation">
+
+    <h2 class="section-title">🙏 Support Our Puja 🙏</h2>
+
+    <p class="section-subtitle">
+        Your contribution helps our committee organise
+        the puja and related celebrations.
+    </p>
+
+    <div class="qr-box">
+
+        <h3>Scan & Donate</h3>
+
+        <!-- Replace with your actual QR image -->
+
+        <img src="images/donation-qr.png"
+             alt="Official Donation QR Code">
+
+        <p>
+            Scan the QR code using your UPI app.
+            Please verify the recipient's name before paying.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>🌺 जय माता दी 🌺</p>
+
+    <strong>Sri Sri Maa Durga Puja Committee</strong>
+
+    <p>Jugsalai Fatak, Jamshedpur, Jharkhand</p>
+
+    <p>© 2026 | All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
