@@ -1,119 +1,658 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#8f1018">
-  <title>Sri Sri Maa Durga Puja Committee | Jugsalai Fatak</title>
-  <meta name="description" content="Puja schedule, committee members, gallery and donation information for Sri Sri Maa Durga Puja Committee, Jugsalai Fatak.">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="topbar">जय माता दी • Jai Maa Durga</div>
-  <header class="hero" id="home">
-    <nav class="nav">
-      <a class="brand" href="#home">🪔 Sri Sri Maa Durga Puja Committee</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#about">About</a><a href="#schedule">Puja Schedule</a><a href="#committee">Committee</a><a href="#gallery">Gallery</a><a href="#donate">Chanda</a><a href="#contact">Contact</a>
-      </div>
-    </nav>
-    <div class="hero-content">
-      <p class="eyebrow">A celebration of devotion, unity & tradition</p>
-      <h1>Sri Sri Maa Durga<br><span>Puja Committee</span></h1>
-      <p class="location">📍 Jugsalai Fatak, Jamshedpur, Jharkhand</p>
-      <p class="hero-note">With devotion in our hearts, we welcome everyone to celebrate Maa Durga.</p>
-      <div class="hero-actions"><a class="btn btn-gold" href="#schedule">View Puja Schedule</a><a class="btn btn-outline" href="#donate">Contribute Chanda</a></div>
-    </div>
-    <div class="hero-symbol" aria-hidden="true">ॐ</div>
-  </header>
+/* =====================================
+   SRI SRI MAA DURGA PUJA COMMITTEE
+   ROYAL RED & GOLDEN THEME
+===================================== */
 
-  <main>
-    <section class="intro section" id="about">
-      <div class="section-heading"><p class="eyebrow">Our tradition</p><h2>Welcome to Our Puja</h2><div class="ornament">✦ ✦ ✦</div></div>
-      <p class="center-copy">Sri Sri Maa Durga Puja Committee, Jugsalai Fatak, brings the community together through devotion, culture and celebration.</p>
-    </section>
+:root {
+  --red: #72000b;
+  --dark-red: #260005;
+  --deep-red: #3d0006;
+  --gold: #ffd66b;
+  --gold-light: #fff0b5;
+  --gold-dark: #b88628;
+  --white: #fffaf0;
+  --text: #fff0d1;
+}
 
-    <section class="schedule section tinted" id="schedule">
-      <div class="section-heading"><p class="eyebrow">Mark your calendar</p>
-        <h2>Durga Puja 2026 Schedule</h2><div class="ornament">✦ ✦ ✦</div>
-      </div>
-      <div class="schedule-grid">
-        <article class="schedule-card"><span class="day">DAY 1</span><h3>Mahalaya</h3>
-        <p>
-          10 October 2026
-        </p></article>
-        <article class="schedule-card"><span class="day">DAY 2</span><h3>Maha Shashthi</h3>
-        <p>
-          16 October 2026
-        </p>
-        </article>
-        <article class="schedule-card"><span class="day">DAY 3</span><h3>Maha Saptami</h3>
-          <p>17 October 2026</p></article>
-        <article class="schedule-card"><span class="day">DAY 4</span><h3>Maha Ashtami</h3>
-          <p> 18 October 2026 </p></article>
-        <article class="schedule-card"><span class="day">DAY 5</span><h3>Maha Navami</h3>
-          <p> 19 October 2026 </p></article>
-        <article class="schedule-card"><span class="day">DAY 6</span><h3>Maha Dashami</h3>
-          <p> 20 October 2026 </p></article>
-        <article class="schedule-card"><span class="day">DAY 7</span><h3>Vijaya Dashami</h3>
-          <p> 21 October 2026 </p></article>
-      </div>
-    </section>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <section class="section" id="committee">
-      <div class="section-heading">
-        <p class="eyebrow">The people behind the celebration</p>
-        <h2>Our Committee</h2>
-        <div class="ornament">✦ ✦ ✦</div>
-        
-      </div>
-      <div class="members-grid">
-        <article class="member"><div class="member-icon">ॐ</div><h3>President</h3>
-          <p>Arvind Mishra</p></article>
-        <article class="member"><div class="member-icon">🪔</div><h3>Vice President</h3>
-          <p>Mimki Sonkar, Rishav Sharma, Karan Singh, Rishabh Tiwari, Golu Rajak, Ajay Rajak, Niku Singh, Lalla Rajak, Pappu Rajak</p>
-        </article>
-        <article class="member"><div class="member-icon">📜</div><h3>Secretary</h3>
-          <p>
-            Anib Mittal, Munna Rajak, Basant Rajak, Anil Rajak
-        </p>
-      </article>
-        <article class="member"><div class="member-icon">💰</div><h3>Treasurer</h3>
-          <p>Ravi Rajak (Ayush Rajak)</p></article>
-      </div>
-    </section>
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
 
-    <section class="gallery-section section tinted" id="gallery">
-      <div class="section-heading"><p class="eyebrow">Memories & devotion</p><h2>Photo Gallery</h2><div class="ornament">✦ ✦ ✦</div>
-    </div>
-      <div class="gallery-grid">
-        <figure class="photo-placeholder"><img src="durga_3.jpeg" alt="Maa Durga idol" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-          <span class="fallback">🌺<br>Maa Durga Photo</span>
-          <figcaption>Maa Durga</figcaption>
-        </figure>
-        <figure class="photo-placeholder"><img src="padnal.jpeg" alt="Puja pandal" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">🪔<br>Pandal Photo</span><figcaption>Pandal & Decoration</figcaption></figure>
-        <figure class="photo-placeholder"><img src="durga_4.png" alt="Community celebration" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="fallback">🙏<br>Celebration Photo</span><figcaption>Community Celebration</figcaption></figure>
-      </div>
-    </section>
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(ellipse at top, #920b18 0%, #510008 45%, #200004 100%);
+  color: var(--white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
 
-    <section class="donate section" id="donate">
-      <div class="section-heading"><p class="eyebrow">Your support keeps tradition alive</p><h2>Chanda / Donation</h2><div class="ornament">✦ ✦ ✦</div></div>
-      <div class="donate-box">
-        <div class="donate-copy"><h3>Support Our Durga Puja</h3><p>Your contribution helps the committee arrange Puja, decorations and community activities.</p><p>
-          <strong>UPI ID:  9942515076m@pnb</strong> </p><p class="small-warning">Only use the committee's authorised payment account. Verify the QR code and account name before publishing.</p></div>
-        <div class="qr-wrap"><img src="final_qr.png" alt="Committee donation QR code" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="qr-fallback">▦<br><strong>Add authorised UPI QR</strong><small>Save your QR image as images/chanda-qr.png</small></div><p>Scan & Pay</p></div>
-      </div>
-    </section>
+/* GOLDEN DECORATIVE BACKGROUND */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle, #ffd66b28 1px, transparent 2px),
+    radial-gradient(circle, #ffffff0d 1px, transparent 2px);
+  background-size: 45px 45px, 75px 75px;
+}
 
-    <section class="section contact-section" id="contact">
-      <div class="section-heading"><p class="eyebrow">We would love to hear from you</p><h2>Contact Us</h2><div class="ornament">✦ ✦ ✦</div></div>
-      <div class="contact-card"><p><strong>Committee:</strong> Sri Sri Maa Durga Puja Committee, Jugsalai Fatak</p><p><strong>Address:</strong> Jugsalai Fatak, Jamshedpur, Jharkhand</p><p><strong>Contact number:</strong> Sourav Rajak :- 8603030305, Rohit Rajak :- 9102277736, Abhishek Rajak :- 9942291899</p>
-      </div>
-    </section>
-  </main>
+/* TOP BAR */
+.topbar {
+  background: linear-gradient(
+    90deg,
+    #4a0005,
+    #a80d18,
+    #4a0005
+  );
+  color: var(--gold-light);
+  text-align: center;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--gold-dark);
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: bold;
+}
 
-  <footer><div class="footer-symbol">ॐ</div><h2>Sri Sri Maa Durga Puja Committee</h2><p>Jugsalai Fatak, Jamshedpur, Jharkhand</p><p class="copyright">© 2026 • Made with devotion 🙏</p></footer>
-  <script src="script.js"></script>
-</body>
-</html>
+/* NAVIGATION */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 6%;
+  background: rgba(35, 0, 4, 0.96);
+  border-bottom: 1px solid var(--gold-dark);
+  position: relative;
+  z-index: 100;
+}
+
+.brand {
+  color: var(--gold);
+  font-size: 19px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 7px 12px;
+  border-radius: 7px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  min-height: 88vh;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 45px 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at center, #a50c1a 0%, #65000b 48%, #250004 100%);
+  border-bottom: 3px solid var(--gold-dark);
+}
+
+.hero::before {
+  content: "✦";
+  position: absolute;
+  top: 35px;
+  left: 8%;
+  color: #ffd66b65;
+  font-size: 55px;
+}
+
+.hero::after {
+  content: "✦";
+  position: absolute;
+  bottom: 30px;
+  right: 8%;
+  color: #ffd66b65;
+  font-size: 55px;
+}
+
+.hero-content {
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 76px);
+  line-height: 1.2;
+  color: var(--gold-light);
+  text-shadow:
+    0 3px 0 #8d5b0c,
+    0 0 25px #ffcc4455;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.location {
+  color: var(--gold-light);
+  font-size: 17px;
+  margin: 12px 0;
+}
+
+.hero-note {
+  max-width: 650px;
+  margin: 15px auto 25px;
+  color: #fff0df;
+  font-size: 16px;
+}
+
+.hero-symbol {
+  position: absolute;
+  right: 5%;
+  bottom: 2%;
+  color: #ffd66b12;
+  font-size: clamp(150px, 28vw, 350px);
+  pointer-events: none;
+}
+
+/* BUTTONS */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 13px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.btn-gold {
+  color: #4b0005;
+  background: linear-gradient(
+    135deg,
+    #fff2bd,
+    #e9b638,
+    #ffe9a0
+  );
+  border: 1px solid #fff0b5;
+  box-shadow: 0 5px 18px #0004;
+}
+
+.btn-outline {
+  color: var(--gold);
+  background: #ffffff08;
+  border: 1px solid var(--gold);
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px #ffd66b45;
+}
+
+/* ALL SECTIONS */
+.section {
+  padding: 75px 7%;
+  position: relative;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font-size: clamp(29px, 5vw, 45px);
+  color: var(--gold);
+  line-height: 1.3;
+  text-shadow: 0 2px 15px #ffcf3b22;
+}
+
+.ornament {
+  color: var(--gold);
+  letter-spacing: 12px;
+  margin-top: 13px;
+  font-size: 19px;
+}
+
+.center-copy {
+  max-width: 780px;
+  margin: auto;
+  text-align: center;
+  color: var(--text);
+  font-size: 17px;
+}
+
+.tinted {
+  background: linear-gradient(
+    135deg,
+    #8a0914ee,
+    #460006f5,
+    #76000bee
+  );
+  border-top: 1px solid #d6a54265;
+  border-bottom: 1px solid #d6a54265;
+}
+
+/* SCHEDULE CARDS */
+.schedule-grid {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.schedule-card {
+  text-align: center;
+  padding: 27px 20px;
+  border: 1px solid var(--gold-dark);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #850b16, #350004);
+  box-shadow: 0 8px 24px #0003;
+  transition: 0.3s;
+}
+
+.schedule-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 28px #0005;
+}
+
+.day {
+  display: inline-block;
+  color: #3c0004;
+  background: linear-gradient(135deg, #fff0b5, #d6a12d);
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.schedule-card h3 {
+  color: var(--gold);
+  font-size: 21px;
+  margin: 14px 0 8px;
+}
+
+.schedule-card p {
+  color: var(--text);
+}
+
+/* COMMITTEE MEMBERS */
+.members-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.member {
+  text-align: center;
+  padding: 28px 22px;
+  border: 1px solid var(--gold-dark);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #780712, #320004);
+  box-shadow: 0 8px 25px #0003;
+  transition: 0.3s;
+}
+
+.member:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.member-icon {
+  display: grid;
+  place-items: center;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+  background: #ffffff08;
+  font-size: 29px;
+}
+
+.member h3 {
+  color: var(--gold);
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.member p {
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+/* GALLERY */
+.gallery-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.photo-placeholder {
+  position: relative;
+  overflow: hidden;
+  background: #390005;
+  border: 2px solid var(--gold-dark);
+  border-radius: 17px;
+  box-shadow: 0 10px 25px #0004;
+  transition: 0.3s;
+}
+
+.photo-placeholder:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 30px #0005;
+}
+
+.photo-placeholder img {
+  display: block;
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+}
+
+.photo-placeholder figcaption {
+  padding: 13px;
+  color: var(--gold);
+  font-size: 17px;
+  font-weight: bold;
+  background: #300004;
+}
+
+.fallback {
+  display: none;
+  min-height: 250px;
+  place-items: center;
+  align-content: center;
+  color: var(--gold);
+  font-size: 25px;
+  text-align: center;
+}
+
+/* DONATION */
+.donate-box {
+  max-width: 950px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 30px;
+  padding: 32px;
+  border: 1px solid var(--gold);
+  border-radius: 22px;
+  background: linear-gradient(135deg, #850b16, #350004);
+  box-shadow: 0 12px 35px #0004;
+}
+
+.donate-copy h3 {
+  color: var(--gold);
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+
+.donate-copy p {
+  color: var(--text);
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+
+.donate-copy strong {
+  color: var(--gold-light);
+  overflow-wrap: anywhere;
+}
+
+.small-warning {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.qr-wrap {
+  max-width: 300px;
+  width: 100%;
+  margin: auto;
+  padding: 22px;
+  text-align: center;
+  background: #fffaf0;
+  color: #520008;
+  border: 3px solid var(--gold);
+  border-radius: 18px;
+}
+
+.qr-wrap img {
+  display: block;
+  width: 100%;
+  max-width: 230px;
+  margin: 12px auto;
+  border-radius: 6px;
+}
+
+.qr-wrap p {
+  font-weight: bold;
+  color: #65000b;
+  font-size: 18px;
+}
+
+.qr-fallback {
+  display: none;
+  min-height: 150px;
+  place-items: center;
+  align-content: center;
+  font-size: 30px;
+  overflow-wrap: anywhere;
+}
+
+.qr-fallback strong {
+  font-size: 15px;
+}
+
+.qr-fallback small {
+  font-size: 11px;
+}
+
+/* CONTACT */
+.contact-card {
+  max-width: 850px;
+  margin: auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #780712, #340004);
+  border: 1px solid var(--gold-dark);
+  border-radius: 17px;
+  box-shadow: 0 8px 25px #0003;
+}
+
+.contact-card p {
+  padding: 12px 0;
+  color: var(--text);
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid #ffd66b25;
+}
+
+.contact-card p:last-child {
+  border-bottom: none;
+}
+
+.contact-card strong {
+  color: var(--gold);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 45px 20px;
+  background: linear-gradient(180deg, #380004, #180002);
+  border-top: 2px solid var(--gold-dark);
+}
+
+.footer-symbol {
+  color: var(--gold);
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+footer h2 {
+  color: var(--gold);
+  font-size: clamp(21px, 4vw, 30px);
+  margin-bottom: 8px;
+}
+
+footer p {
+  color: var(--text);
+}
+
+.copyright {
+  margin-top: 18px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* MOBILE RESPONSIVE DESIGN */
+@media (max-width: 850px) {
+  .nav {
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    font-size: 16px;
+    max-width: 80%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px;
+    border-top: 1px solid #ffd66b25;
+  }
+
+  .donate-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero {
+    min-height: 75vh;
+    padding: 45px 17px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-note {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 55px 5%;
+  }
+
+  .schedule-grid,
+  .members-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-placeholder img {
+    height: 270px;
+  }
+
+  .donate-box {
+    padding: 18px;
+  }
+
+  .contact-card {
+    padding: 18px;
+  }
+
+  .btn {
+    padding: 12px 17px;
+  }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
